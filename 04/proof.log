@@ -1,0 +1,26 @@
+[  386.206627] usb 1-1: new full-speed USB device number 4 using xhci_hcd
+[  386.547702] usb 1-1: New USB device found, idVendor=0951, idProduct=16d2, bcdDevice=21.11
+[  386.548347] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  386.551971] usb 1-1: Product: HyperX Alloy FPS Pro Mechanical Gaming Keyboard
+[  386.552500] usb 1-1: Manufacturer: Kingston
+[  386.560679] input: Kingston HyperX Alloy FPS Pro Mechanical Gaming Keyboard as /devices/pci0000:00/0000:00:0c.0/usb1/1-1/1-1:1.0/0003:0951:16D2.0007/input/input12
+[  386.620731] hid-generic 0003:0951:16D2.0007: input,hidraw0: USB HID v1.11 Keyboard [Kingston HyperX Alloy FPS Pro Mechanical Gaming Keyboard] on usb-0000:00:0c.0-1/input0
+[  386.630488] input: Kingston HyperX Alloy FPS Pro Mechanical Gaming Keyboard Consumer Control as /devices/pci0000:00/0000:00:0c.0/usb1/1-1/1-1:1.1/0003:0951:16D2.0008/input/input13
+[  386.685147] hid-generic 0003:0951:16D2.0008: input,hiddev96,hidraw1: USB HID v1.11 Device [Kingston HyperX Alloy FPS Pro Mechanical Gaming Keyboard] on usb-0000:00:0c.0-1/input1
+[  386.693739] input: Kingston HyperX Alloy FPS Pro Mechanical Gaming Keyboard as /devices/pci0000:00/0000:00:0c.0/usb1/1-1/1-1:1.2/0003:0951:16D2.0009/input/input14
+[  386.751543] hid-generic 0003:0951:16D2.0009: input,hidraw2: USB HID v1.11 Keyboard [Kingston HyperX Alloy FPS Pro Mechanical Gaming Keyboard] on usb-0000:00:0c.0-1/input2
+[  390.255720] usb 1-1: USB disconnect, device number 4
+[  423.590804] usb 1-1: new full-speed USB device number 5 using xhci_hcd
+[  423.935478] usb 1-1: New USB device found, idVendor=0951, idProduct=16d2, bcdDevice=21.11
+[  423.936349] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  423.938728] usb 1-1: Product: HyperX Alloy FPS Pro Mechanical Gaming Keyboard
+[  423.940281] usb 1-1: Manufacturer: Kingston
+[  423.960727] input: Kingston HyperX Alloy FPS Pro Mechanical Gaming Keyboard as /devices/pci0000:00/0000:00:0c.0/usb1/1-1/1-1:1.0/0003:0951:16D2.000A/input/input15
+[  424.014170] hid-generic 0003:0951:16D2.000A: input,hidraw0: USB HID v1.11 Keyboard [Kingston HyperX Alloy FPS Pro Mechanical Gaming Keyboard] on usb-0000:00:0c.0-1/input0
+[  424.023481] input: Kingston HyperX Alloy FPS Pro Mechanical Gaming Keyboard Consumer Control as /devices/pci0000:00/0000:00:0c.0/usb1/1-1/1-1:1.1/0003:0951:16D2.000B/input/input16
+[  424.078104] hid-generic 0003:0951:16D2.000B: input,hiddev96,hidraw1: USB HID v1.11 Device [Kingston HyperX Alloy FPS Pro Mechanical Gaming Keyboard] on usb-0000:00:0c.0-1/input1
+[  424.084149] input: Kingston HyperX Alloy FPS Pro Mechanical Gaming Keyboard as /devices/pci0000:00/0000:00:0c.0/usb1/1-1/1-1:1.2/0003:0951:16D2.000C/input/input17
+[  424.139916] hid-generic 0003:0951:16D2.000C: input,hidraw2: USB HID v1.11 Keyboard [Kingston HyperX Alloy FPS Pro Mechanical Gaming Keyboard] on usb-0000:00:0c.0-1/input2
+[  424.152515] Hello world USB !
+[  429.064034] usb 1-1: USB disconnect, device number 5
+[  429.529657] Cleaning up hello usb module.

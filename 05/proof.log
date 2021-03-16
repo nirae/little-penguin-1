@@ -1,0 +1,17 @@
+$ lsmod                
+Module                  Size  Used by
+misc_char_device       16384  0
+
+$ ls -l /dev/fortytwo 
+crw------- 1 root root 10, 125 Dec 17 16:19 /dev/fortytwo
+
+$ cat /dev/fortytwo ; echo
+ndubouil
+
+$ printf coucou > /dev/fortytwo
+-bash: printf: write error: Invalid argument
+
+$ printf ndubouil > /dev/fortytwo
+
+$ echo $?
+0

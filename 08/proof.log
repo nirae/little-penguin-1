@@ -1,0 +1,4 @@
+$ cat /dev/reverse
+$ echo -n coucou > /dev/reverse
+$ cat /dev/reverse
+uocuoc$

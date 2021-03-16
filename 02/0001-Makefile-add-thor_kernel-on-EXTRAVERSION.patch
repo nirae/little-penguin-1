@@ -1,0 +1,28 @@
+From f52aa76c3e034b239ca4ee035979ce5632f5d29f Mon Sep 17 00:00:00 2001
+From: ndubouil <ndubouil@student.42.fr>
+Date: Wed, 16 Dec 2020 16:25:45 +0100
+Subject: [PATCH] Makefile: add -thor_kernel on EXTRAVERSION
+
+Adding the extension -thor_kernel in the EXTRAVERSION variable
+
+Signed-off-by: ndubouil <ndubouil@student.42.fr>
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index e30cf02da8b8..ddb3dab49cb1 100644
+--- a/Makefile
++++ b/Makefile
+@@ -2,7 +2,7 @@
+ VERSION = 5
+ PATCHLEVEL = 10
+ SUBLEVEL = 0
+-EXTRAVERSION =
++EXTRAVERSION = '-thor_kernel'
+ NAME = Kleptomaniac Octopus
+ 
+ # *DOCUMENTATION*
+-- 
+2.28.0
+
