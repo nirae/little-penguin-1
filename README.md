@@ -28,21 +28,19 @@ To re-sync if there is changes, run :
 vagrant rsync
 ```
 
-## Challenges
+## 00
 
-### 00
-
-#### Todo
+### Todo
 
 - Download Linus’s latest git tree from git.kernel.org (You have to figure out whichone is his. It’s not that hard, just remember what his last name is and you shouldbe fine.)
 - Build it, install it, and boot it. You can use whatever kernel configuration optionsyou wish to use, but you must enable CONFIG_LOCALVERSION_AUTO=y.
 
-#### Turn in
+### Turn in
 
 - Kernel boot log file.
 - Your  ̇config file
 
-#### Notes
+### Notes
 
 **CONFIG_LOCALVERSION_AUTO** : Automatically append version information to the version string.
 
@@ -64,9 +62,9 @@ To get the boot logs :
 journalctl -b
 ```
 
-### 01
+## 01
 
-#### Todo
+### Todo
 
 Build a "Hello World module" with the following behaviour:
 ```
@@ -79,11 +77,11 @@ Build a "Hello World module" with the following behaviour:
 %
 ```
 
-#### Turn in
+### Turn in
 
 Makefile and code
 
-#### Notes
+### Notes
 
 Compile the module :
 
@@ -115,18 +113,18 @@ See the module output :
 dmesg
 ```
 
-### 02
+## 02
 
-#### Todo
+### Todo
 
 Take the kernel git tree from assignment 00 and change the Makefile to modify the **EXTRAVERSION** field. Do this in a way that the running kernel (after modifying the Makefile, rebuilding, and rebooting) has the characters "-thor_kernel" in theversion string.
 
-#### Turn in
+### Turn in
 
 - Kernel boot log
 - A patch to the original Makefile, compliant with Linux standards (Documentation/-SubmittingPatches)
 
-#### Notes
+### Notes
 
 [Submitting Patches](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/process/submitting-patches.rst)
 
@@ -134,19 +132,19 @@ Take the kernel git tree from assignment 00 and change the Makefile to modify th
 
 [YouTube - Write and Submit your first Linux kernel Patch](https://www.youtube.com/watch?v=LLBrBBImJt4)
 
-### 03
+## 03
 
-#### Todo
+### Todo
 
 Take the following file, and modify it to match the Linux coding style (Documentation/CodingStyle)
 
 ![03](images/screen_03.png)
 
-#### Turn in
+### Turn in
 
 - Your version of the C file
 
-#### Notes
+### Notes
 
 [CodingStyle](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/process/coding-style.rst)
 
@@ -156,19 +154,19 @@ Check the style :
 perl /sources/linux/scripts/checkpatch.pl -f ./file.c
 ```
 
-### 04
+## 04
 
-#### Todo
+### Todo
 
 Take the kernel module you wrote for task 01, and modify it so that when any USB keyboard is plugged in, the module will be automatically loaded by the correct userspace hotplug tools (which are implemented by depmod / kmod / udev / mdev / systemd, depending on what distro you are using.)
 
-#### Turn in
+### Turn in
 
 - A rules file, depending on what system you are using.
 - Your code
 - Some proof that your code actually works!
 
-#### Notes
+### Notes
 
 Compile the module :
 
@@ -210,9 +208,9 @@ udevadm control --reload
 
 Run `dmesg -w` to follow the logs and in the VirtualBox window, load the keyboard in USB and see the logs!
 
-### 05
+## 05
 
-#### Todo
+### Todo
 
 - Take the kernel module you wrote for task 01, and modify it to be a misc char device driver. The misc interface is a very simple way to be able to create a character device, without having to worry about all of the sysfs and character device registration mess. And what a mess it is, so stick to the simple interfaces wherever possible.
 - The misc device should be created with a dynamic minor number, no need to runoff and trying to reserve a real minor number for your test module, that would be crazy.
@@ -222,12 +220,12 @@ Run `dmesg -w` to follow the logs and in the VirtualBox window, load the keyboar
 - When the character device node is written to, the data sent to the kernel needs to be checked. If it matches your assigned student login, then return a correct write return value. If the value does not match your assigned student login, return the "invalid value" error value.
 - The misc device should be registered when your module is loaded, and unregistered when it is unloaded.
 
-#### Turn in
+### Turn in
 
 - Your code
 - Some proof
 
-#### Notes
+### Notes
 
 [Miscellaneous Character Drivers](https://www.linuxjournal.com/article/2920)
 
@@ -255,19 +253,19 @@ printf ndubouil > /dev/fortytwo
 
 No error
 
-### 06
+## 06
 
-#### Todo
+### Todo
 
 Download the linux-next kernel for today. Or tomorrow, just use the latest one. Itchanges every day so there is no specific one you need to pick. Build it. Boot it.
 
-#### Turn in
+### Turn in
 
 - Kernel boot log
 
 What is the linux-next kernel? Ah, that’s part of the challenge. For a hint, you should read the excellent documentation about how the Linux kernel is developed in Documentation/development-process/ in the kernel source itself. It’s a great read, and should tell you all you never wanted to know about what Linux kernel developers do and how they do it.
 
-#### Notes
+### Notes
 
 [Development Process](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/process)
 
@@ -308,9 +306,9 @@ To get the boot logs :
 journalctl -b
 ```
 
-### 07
+## 07
 
-#### Todo
+### Todo
 
 - Take the kernel module you wrote for task 01, and modify it to be create a debugfs subdirectory called "fortytwo". In that directory, create 3 virtual files called "id","jiffies", and "foo".
 - The file "id" operates just like it did for assignment 05, use the same logic there, the file must be readable and writable by any user.
@@ -319,12 +317,12 @@ journalctl -b
 - When the module is unloaded, all of the debugfs files are cleaned up, and any memory allocated is freed.
 - Note: Besides the file’s rights, the debug directory itself need to be readable by everyone. There’s no option for that, so let’s use that old good chown !
 
-#### Turn in
+### Turn in
 
 - Your code
 - Some proof
 
-#### Notes
+### Notes
 
 First, we need a kernel with the option `CONFIG_DEBUG_FS`. Recompile it with the script compile.sh
 
@@ -365,19 +363,19 @@ coucou
 
 [mutex design](https://www.kernel.org/doc/html/latest/locking/mutex-design.html)
 
-### 08
+## 08
 
-#### Todo
+### Todo
 
 - Take the following file, fix the coding style, and fix the behaviour of the code
 
 ![03](images/screen_08.png)
 
-#### Turn in
+### Turn in
 
 - Your version of the C file
 
-#### Notes
+### Notes
 
 [CodingStyle](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/process/coding-style.rst)
 
@@ -403,9 +401,9 @@ $ cat /dev/reverse
 uocuoc$
 ```
 
-### 09
+## 09
 
-#### Todo
+### Todo
 
 - Create a module that can list mount points on your system, with the associatedname.
 - Your file must be named /proc/mymounts
@@ -419,13 +417,13 @@ run     /run
 dev     /dev
 ```
 
-#### Turn in
+### Turn in
 
 - The module code, with a Makefile
 
 Not a hard assignment, but really tricky. Read some docs about mountpoints, directory listing and linked-list loop in the Kernel. And have fun :)
 
-#### Notes
+### Notes
 
 Compile and insert it.
 
